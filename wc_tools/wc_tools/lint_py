@@ -1,0 +1,15 @@
+#!/bin/bash
+
+FILE="$1"
+
+if [ -z "$FILE" ]; then
+  echo "Usage: lintfile <filename.py>"
+  exit 1
+fi
+
+echo "Linting $FILE ..."
+ruff "$FILE"
+black "$FILE"
+mypy "$FILE"
+pyright "$FILE"
+pylint "$FILE"

@@ -1,0 +1,26 @@
+{
+  "name": "Python Dev",
+  "dockerFile": "../Dockerfile",
+  "context": "..",
+  "settings": {
+    "python.defaultInterpreterPath": "/usr/local/bin/python",
+    "python.analysis.extraPaths": ["./wc_tools"],
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.ruffEnabled": true,
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": false
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "charliermarsh.ruff",
+    "ms-python.black-formatter"
+  ],
+  "workspaceFolder": "/workspace/wc_tools",
+  "mounts": [
+    "source=${localWorkspaceFolder}/wc_tools,target=/workspace/wc_tools,type=bind"
+  ],
+  "postCreateCommand": "pip install -r requirements.txt"
+}

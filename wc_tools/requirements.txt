@@ -1,0 +1,17 @@
+# Core (only needed if using typing or packaging helpers)
+typing-extensions>=4.0.0
+
+# Linting & Formatting
+black>=24.0.0
+ruff>=0.4.0
+pylint>=3.0.0
+flake8>=7.0.0  # Optional if you want both flake8 and ruff
+mypy>=1.5.0
+pyright>=1.1.350
+
+# Testing
+pytest>=8.0.0
+pytest-mock>=3.10.0
+
+# Optional tools (coverage, etc.)
+coverage>=7.4.0
